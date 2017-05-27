@@ -34,16 +34,31 @@ const MainCopy = styled.h1`
   font-size: 28px;
   font-weight: lighter;
   width: 60%;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 321px) {
+    font-size: 18px;
+  }
 `
 
 const SubTitle = styled.section`
   color: #222222;
   font-weight: lighter;
+
+  @media (max-width: 768px) {
+    padding: 0 15%;
+  }
+
   & > h1 {
     font-size: 30px;
     font-weight: lighter;
     margin-top: 60px;
     margin-bottom: 70px;
+
+    @media (max-width: 768px) {
+      margin: 100px 0 15px 0;
+    }
   }
 `
 
@@ -72,14 +87,17 @@ const Image = styled.div`
 const ImageText = styled.div`
   font-weight: lighter;
   margin-top: 30px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 60px;
+  }
 `
 
 const Timeline = styled.div`
   display: flex;
   flex-direction: row;
 
-  & > div > div {
-    padding: 0 10%;
+  & > div > div > div {
   }
 `
 
@@ -97,7 +115,7 @@ export default class App extends Component {
       <div className="App">
         <MainBackground>
           <MainCopy>
-            Hello.
+            Hello there.
             I’m Rodrigo, front-end developer from Chile.
             I’m passionate about learning new things, crafting beautiful user experiences and technology.
             <br/>
@@ -130,7 +148,7 @@ export default class App extends Component {
           <h1>Latest Work</h1>
         </SubTitle>
         <Row>
-          <Col xs={6} md={6}>
+          <Col xs={12} md={6}>
             <Image>
               <img src='/theketocalculator.png' />
             </Image>
@@ -142,7 +160,7 @@ export default class App extends Component {
               React Native, Android
             </ImageText>
           </Col>
-          <Col xs={6} md={6}>
+          <Col xs={12} md={6}>
             <Image>
               <img src='/joinventure.jpg' />
             </Image>
@@ -159,8 +177,8 @@ export default class App extends Component {
           <Col xs={12} md={12}>
             <SubTitle>
               <h1>Work Experience</h1>
-              <Timeline>
-                <Col xs={3} md={3}>
+              <Row>
+                <Col xs={6} md={3}>
                   <h1 style={{borderBottom: '6px solid #2196F3', paddingBottom: 20}}>2017</h1>
                   <div>
                     <a href='http://orionsoft.io' target='_blank'>
@@ -174,7 +192,7 @@ export default class App extends Component {
                     </span>
                   </div>
                 </Col>
-                <Col xs={3} md={3}>
+                <Col xs={6} md={3}>
                   <h1 style={{borderBottom: '6px solid #FFC107', paddingBottom: 20}}>2016</h1>
                   <div>
                     <a href='http://archdaily.com' target='_blank'>
@@ -188,7 +206,7 @@ export default class App extends Component {
                     </span>
                   </div>
                 </Col>
-                <Col xs={3} md={3}>
+                <Col xs={6} md={3}>
                   <h1 style={{borderBottom: '6px solid rgba(239, 80, 40, 0.91)', paddingBottom: 20}}>2015</h1>
                   <div>
                     Meteor Freelancer / <a href='http://getcrate.co' target='_blank'> GetCrate.co </a>
@@ -200,7 +218,7 @@ export default class App extends Component {
                     </span>
                   </div>
                 </Col>
-                <Col xs={3} md={3}>
+                <Col xs={6} md={3}>
                   <h1 style={{borderBottom: '6px solid #8BC34A', paddingBottom: 20}}>2014</h1>
                   <div>
                     <a href='http://comparaonline.com' target='_blank'>
@@ -214,10 +232,31 @@ export default class App extends Component {
                     </span>
                   </div>
                 </Col>
-              </Timeline>
+              </Row>
             </SubTitle>
           </Col>
         </Row>
+        <SubTitle>
+          <h1>Things I do and like</h1>
+          <div>
+            Canada
+          </div>
+          <div>
+            Ketogenic diet
+          </div>
+          <div>
+            StrongLifts 5x5, calisthenics
+          </div>
+          <div>
+            Travelling
+          </div>
+          <div>
+            Always learning new things
+          </div>
+          <div>
+            Learning new languages. I speak intermediate portuguese, intermediate/advanced english and native spanish
+          </div>
+        </SubTitle>
       </div>
     )
   }
