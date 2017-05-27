@@ -115,7 +115,7 @@ export default class App extends Component {
               </a>
             </div>
             <div>
-              <a href='http://github.com/rodcisal' target='_blank'>
+              <a href='https://www.linkedin.com/in/rodrigo-cisternas-albornoz-59500731/' target='_blank'>
                 <LinkedinIcon />
               </a>
             </div>
