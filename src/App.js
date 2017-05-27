@@ -170,7 +170,7 @@ export default class App extends Component {
                     Javascript Developer
                     <br />
                     <span>
-                      Meteor, React, React-native, GraphQL
+                      Meteor, React, React-native, GraphQL, ES6/ES7, Apollo
                     </span>
                   </div>
                 </Col>
