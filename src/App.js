@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
 import './App.css'
-import { Row, Col, getRowProps, getColumnProps } from 'react-flexbox-grid'
+import { Row, Col } from 'react-flexbox-grid'
 import styled from 'styled-components'
+import GithubIcon from 'react-icons/lib/ti/social-github-circular'
+import TwitterIcon from 'react-icons/lib/ti/social-twitter-circular'
+import LinkedinIcon from 'react-icons/lib/ti/social-linkedin-circular'
 
 const Colors = {
   mainRed: 'rgba(226, 61, 65, 0.91)'
 }
 
-const Title = styled.h1`
-  color: white;
-  margin: 0;
-`
+// const Title = styled.h1`
+//   color: white;
+//   margin: 0;
+// `
 
 const MainBackground = styled.section`
   background-color: red;
@@ -47,9 +50,7 @@ const SubTitle = styled.section`
 const GetInTouch = styled.button`
   border: 1px solid white;
   background-color: transparent;
-  font-size: 25px;
-  border-radius: 5px;
-  padding: 10px 25px;
+  font-size: 25px; border-radius: 5px; padding: 10px 25px;
   color: #FFF;
   font-weight: lighter;
   margin-top: 20px;
@@ -82,6 +83,14 @@ const Timeline = styled.div`
   }
 `
 
+const Social = styled.section`
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  font-size: 40px;
+  color: white;
+`
+
 export default class App extends Component {
   render () {
     return (
@@ -99,6 +108,23 @@ export default class App extends Component {
               Get In Touch
             </a>
           </GetInTouch>
+          <Social>
+            <div>
+              <a href='http://github.com/rodcisal' target='_blank'>
+                <GithubIcon />
+              </a>
+            </div>
+            <div>
+              <a href='http://github.com/rodcisal' target='_blank'>
+                <LinkedinIcon />
+              </a>
+            </div>
+            <div>
+              <a href='http://twitter.com/rodcisal' target='_blank'>
+                <TwitterIcon />
+              </a>
+            </div>
+          </Social>
         </MainBackground>
         <SubTitle>
           <h1>Latest Work</h1>
@@ -163,7 +189,7 @@ export default class App extends Component {
                   </div>
                 </Col>
                 <Col xs={3} md={3}>
-                  <h1 style={{borderBottom: '6px solid rgba(239, 80, 40, 0.91)', paddingBottom: 20}}>2016</h1>
+                  <h1 style={{borderBottom: '6px solid rgba(239, 80, 40, 0.91)', paddingBottom: 20}}>2015</h1>
                   <div>
                     Meteor Freelancer / <a href='http://getcrate.co' target='_blank'> GetCrate.co </a>
                     <br />
@@ -175,7 +201,7 @@ export default class App extends Component {
                   </div>
                 </Col>
                 <Col xs={3} md={3}>
-                  <h1 style={{borderBottom: '6px solid #8BC34A', paddingBottom: 20}}>2015</h1>
+                  <h1 style={{borderBottom: '6px solid #8BC34A', paddingBottom: 20}}>2014</h1>
                   <div>
                     <a href='http://comparaonline.com' target='_blank'>
                       ComparaOnline.com
